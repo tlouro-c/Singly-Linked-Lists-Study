@@ -36,13 +36,13 @@ int	main (void)
 
 	// Function to add node to BEGGINING of the list //* Time Complexity : O(1)
 	add_to_beg(&head, 75);
-	// add_to_beg(&head, 50);
+	add_to_beg(&head, 50);
 
 	// Function to add node to the MIDLE of the list //* Time Complexity : O(n)
-	// add_to_mid(&head, 3, 150);
+	add_to_mid(&head, 3, 150);
 
 	// Function to add node to END of the list //* Time Complexity : O(n)
-	// add_to_end(&head, 100);
+	add_to_end(&head, 100);
 
 
 	// Function to print list before deletion //* Time Complexity : O(n)
@@ -54,13 +54,13 @@ int	main (void)
 	print_list(head);
 
 	// Function to delete node from BEGGINING of the list //* Time Complexity : O(1)
-	// del_beg(&head);
+	del_beg(&head);
 
 	// Function to delete node IF DATA MATCHES DATA_REF from the list //* Time Complexity : O(n)
 	del_if(&head, 75);
 
 	// Function to delete node from END of the list //* Time Complexity : O(n)
-	// del_end(&head);
+	del_end(&head);
 
 	// Function to print list after deletion //* Time Complexity : O(n)
 	red();
