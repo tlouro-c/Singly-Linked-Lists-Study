@@ -36,7 +36,6 @@ int	main (void)
 
 	// Function to add node to BEGGINING of the list //* Time Complexity : O(1)
 	add_to_beg(&head, 75);
-	add_to_beg(&head, 50);
 
 	// Function to add node to the MIDLE of the list //* Time Complexity : O(n)
 	add_to_mid(&head, 3, 150);
@@ -57,7 +56,7 @@ int	main (void)
 	del_beg(&head);
 
 	// Function to delete node IF DATA MATCHES DATA_REF from the list //* Time Complexity : O(n)
-	del_if(&head, 75);
+	del_if(&head, 150);
 
 	// Function to delete node from END of the list //* Time Complexity : O(n)
 	del_end(&head);
@@ -235,6 +234,11 @@ void	del_if(node **head, int data_ref)
 		free (previous); // free the first node
 		*head = NULL; // Initialize head to NULL
 		return ; // Return
+	}
+	if (previous -> data == data_ref)
+	{
+		del_beg(head);
+		return ;
 	}
 	while (previous -> next_link != NULL) // Keep track of the previous node & Iterate and stay in the last node because inside the loop I always use current to check if there's a node after the previous
 	{
